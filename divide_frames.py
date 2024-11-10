@@ -2,6 +2,7 @@ import glob
 import os
 import torchvision
 
+#Dividing videos into frames
 def divide_video_into_frame(input_dir):
     for dataset in ['train', 'val', 'test']:
         videos = glob.glob(os.path.join(input_dir, dataset, '*_color.mp4'))

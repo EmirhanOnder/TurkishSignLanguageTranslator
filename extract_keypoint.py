@@ -106,7 +106,7 @@ for folder in video_folders:
                     keypoints = extract_keypoints(results)
                     keypoints_list.append(keypoints)
 
-            # Convert to numpy array and save
+            # Converting to numpy array and save
             keypoints_array = np.array(keypoints_list)
             save_path = os.path.join(output_folder, f"{os.path.splitext(video_name)[0]}_keypoints.npy")
             np.save(save_path, keypoints_array)
